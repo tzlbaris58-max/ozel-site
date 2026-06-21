@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  overflow: hidden;
+  color: white;
+
+  /* 🌈 canlı gradient */
+  background: linear-gradient(-45deg, #ff4fd8, #ff77c6, #7a5cff, #ffb6e6);
+  background-size: 400% 400%;
+  animation: bgMove 12s ease infinite;
+}
+
+@keyframes bgMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.scene {
+  display: none;
+  height: 100vh;
+  text-align: center;
+  padding-top: 15vh;
+}
+
+.scene.active {
+  display: block;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* 🌟 glow title */
+h1 {
+  text-shadow: 0 0 10px #ff00cc, 0 0 25px #ff66ff;
+}
+
+/* 💗 neon kalp */
+.heart {
+  position: absolute;
+  font-size: 16px;
+  color: #ff00cc;
+  text-shadow: 0 0 12px #ff00cc;
+  animation: floatUp 6s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  from {transform: translateY(100vh); opacity: 1;}
+  to {transform: translateY(-10vh); opacity: 0;}
+}
+
+/* ✨ typing effect */
+.typewriter {
+  width: 80%;
+  margin: auto;
+  white-space: pre-line;
+  opacity: 0.9;
+}

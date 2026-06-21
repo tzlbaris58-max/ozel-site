@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Özel Sistem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div id="app">
+
+  <!-- 🌸 INTRO -->
+  <section class="scene active" id="intro">
+
+    <div class="bg"></div>
+
+    <h1 id="title">Şevval...</h1>
+
+    <p class="sub">(sistem başlatılıyor ❤️)</p>
+
+    <button onclick="next('quiz')">Başlat</button>
+  </section>
+
+  <!-- 📋 QUIZ -->
+  <section class="scene" id="quiz">
+
+    <h2>Soru 1</h2>
+    <p>Barış neden bu sistemi kurdu?</p>
+
+    <button onclick="answer('A')">A) Seni sevdiği için</button>
+    <button onclick="answer('B')">B) Seni daha çok sevdiği için</button>
+    <button onclick="answer('C')">C) Seni sürekli düşündüğü için</button>
+    <button onclick="answer('D')">D) Hepsi + biraz fazlası ❤️</button>
+
+  </section>
+
+  <!-- 💌 RESULT -->
+  <section class="scene" id="result">
+
+    <div class="card">
+
+      <p id="resultText">Sistem analiz ediliyor...</p>
+
+      <p>İyiki tanımışım mağra kadınım ❤️</p>
+
+      <button onclick="next('choice')">Devam</button>
+
+    </div>
+
+  </section>
+
+  <!-- 🌗 CHOICE -->
+  <section class="scene" id="choice">
+
+    <h2>Son seçim</h2>
+
+    <button onclick="choose('coffee')">☕ Sakinlik Modu</button>
+    <button onclick="choose('risk')">🌙 Macera Modu</button>
+
+  </section>
+
+  <!-- ☕ COFFEE -->
+  <section class="scene" id="coffee">
+
+    <h1>Sakinlik Modu ☕</h1>
+
+    <p class="typewriter">
+      Sakin bir sohbet başlatalım... acele yok.
+      İstediğin zaman kahvemizi içmeye gidebiliriz.
+    </p>
+
+    <button onclick="finalConfirm()">Tamam mı?</button>
+
+  </section>
+
+  <!-- 🌙 RISK -->
+  <section class="scene" id="risk">
+
+    <h1>Macera Modu 🌙</h1>
+
+    <p class="typewriter">
+      Barış’ın bir plan oluşturdu...
+      Zaman tamamen sende.
+      Sufle + yürüyüş + saray + keyifli sohbet ☕🌙
+    </p>
+
+    <button onclick="finalConfirm()">Tamam mı?</button>
+
+  </section>
+
+  <!-- 💖 FINAL -->
+  <section class="scene" id="final">
+
+    <h1>Sonuç</h1>
+
+    <p class="big">güzelliğin çok essahlı ❤️</p>
+
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
